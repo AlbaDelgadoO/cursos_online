@@ -1,0 +1,293 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ===== BODY ===== */
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: #f9fafb;
+    color: #333;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* ===== MENÚ SUPERIOR PARA PÁGINAS INTERNAS ===== */
+header {
+    padding: 3rem 2rem;
+    background: linear-gradient(135deg, #c0c9d6, #99a6b7); /* un poco más oscuro */
+    color: #1f2937; /* texto oscuro */
+    border-bottom-left-radius: 40px;
+    border-bottom-right-radius: 40px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    position: relative;
+}
+
+/* Menú arriba a la derecha */
+.menu-superior {
+    position: absolute;
+    top: 20px;
+    right: 40px;
+}
+
+.menu-superior ul {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+}
+
+.menu-superior a {
+    color: #1f2937;
+    font-weight: 600;
+    background: rgba(255, 255, 255, 0.85); /* botones claros sobre el nuevo fondo */
+    padding: 8px 14px;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: 0.3s ease;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.menu-superior a:hover {
+    background: white;
+    color: #111827;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+}
+
+
+/* ===== PORTADA INDEX ===== */
+.portada {
+    position: relative;
+    width: 100%;
+    height: 70vh;
+    overflow: hidden;
+}
+
+.imagen-portada {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(70%);
+}
+
+.menu-superior { 
+    position: absolute; 
+    top: 20px; 
+    right: 40px; 
+} 
+.menu-superior a { 
+    color: white; 
+    font-weight: bold; 
+    background: rgba(0, 0, 0, 0.4); 
+    padding: 8px 14px; 
+    border-radius: 5px; 
+}
+
+.texto-portada {
+    position: absolute;
+    bottom: 80px;
+    left: 60px;
+    color: white;
+}
+
+.texto-portada h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.texto-portada p {
+    font-size: 1.2rem;
+}
+
+/* ===== MAIN ===== */
+main {
+    flex: 1;
+    padding: 3rem 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+main h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #111827;
+    text-align: center;
+}
+
+/* ===== CARRUSEL ===== */
+.carrusel-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    max-width: 1100px;
+    margin: 3rem auto;
+}
+
+.carrusel {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    gap: 1.5rem;
+    padding: 1rem;
+    scrollbar-width: none;
+}
+
+.carrusel::-webkit-scrollbar {
+    display: none;
+}
+
+.curso-card {
+    flex: 0 0 calc(25% - 1.5rem);
+    background: white;
+    border-radius: 15px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    scroll-snap-align: center;
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.curso-card:hover {
+    transform: translateY(-8px);
+}
+
+.curso-card a {
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.curso-card img {
+    width: 100%;
+    height: 120px;
+    object-fit: contain;
+    border-radius: 12px;
+    margin-bottom: 1rem;
+    background-color: #f3f4f6;
+}
+
+.curso-card h4 {
+    color: #4f46e5;
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.curso-card p {
+    font-size: 0.95rem;
+    color: #555;
+}
+
+/* ===== TABLAS ===== */
+.tabla-cursos {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0 10px;
+    margin: 3rem 0;
+    font-size: 1rem;
+    background: white;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.tabla-cursos th,
+.tabla-cursos td {
+    padding: 1rem 2rem;
+    text-align: left;
+    vertical-align: top;
+}
+
+.tabla-cursos thead th {
+    background-color: #4f46e5;
+    color: #fff;
+}
+
+.tabla-cursos tr {
+    background: #fff;
+}
+
+.tabla-cursos tr:hover {
+    background: #f3f4f6;
+    transition: 0.2s ease;
+}
+
+/* ===== FORMULARIOS ===== */
+form {
+    background: white;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    max-width: 600px;
+    margin: 2rem auto;
+}
+
+form label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+form input,
+form select,
+form textarea {
+    width: 100%;
+    padding: 0.7rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+}
+
+form input[type="submit"] {
+    background: linear-gradient(135deg, #4f46e5, #6d28d9);
+    color: white;
+    border: none;
+    border-radius: 30px;
+    padding: 0.8rem;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+form input[type="submit"]:hover {
+    background: linear-gradient(135deg, #6d28d9, #4f46e5);
+}
+
+/* ===== FOOTER ===== */
+footer {
+    text-align: center;
+    padding: 2rem;
+    background: #111827;
+    color: #d1d5db;
+}
+
+footer a {
+    color: #6366f1;
+    font-weight: 600;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 1024px) {
+    .curso-card {
+        flex: 0 0 calc(33.333% - 1.5rem);
+    }
+}
+
+@media (max-width: 768px) {
+    .curso-card {
+        flex: 0 0 calc(50% - 1.5rem);
+    }
+}
+
+@media (max-width: 480px) {
+    .curso-card {
+        flex: 0 0 100%;
+    }
+}
