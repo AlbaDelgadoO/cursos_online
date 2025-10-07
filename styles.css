@@ -115,6 +115,14 @@ main h2 {
     text-align: center;
 }
 
+hr {
+    border: none;
+    height: 4px;
+    background: linear-gradient(to right, #4f46e5, #6d28d9);
+    border-radius: 5px;
+    margin: 2rem 0;
+}
+
 /* ===== CARRUSEL ===== */
 .carrusel-container {
     position: relative;
@@ -272,21 +280,3 @@ footer a {
     font-weight: 600;
 }
 
-/* ===== RESPONSIVE ===== */
-@media (max-width: 1024px) {
-    .curso-card {
-        flex: 0 0 calc(33.333% - 1.5rem);
-    }
-}
-
-@media (max-width: 768px) {
-    .curso-card {
-        flex: 0 0 calc(50% - 1.5rem);
-    }
-}
-
-@media (max-width: 480px) {
-    .curso-card {
-        flex: 0 0 100%;
-    }
-}
